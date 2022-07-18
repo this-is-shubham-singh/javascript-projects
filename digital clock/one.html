@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digital clock</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .clock {
+            position: absolute;
+            color: green;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            font-size: 60px;
+            font-family: Orbitron;
+            letter-spacing: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="digitalclock" class="clock"></div>
+
+    <script>
+        // the code below doesn't update on real time, so we put them inside funtion 
+        function showtime() {
+
+            // date is an object of Date() method (it gives curent date and time )
+            var date = new Date();
+
+            // current hour 
+            var h = date.getHours();
+
+            // current minutes 
+            var m = date.getMinutes();
+
+            // current seconds 
+            var s = date.getSeconds();
+
+            // assigning dafault time to AM 
+            var session = "AM";
+
+
+
+
+            // CHANGING TO 12 HR FORMAT 
+            // if displaying 0 then 24 hr format  
+            // we are not actually chaging format, only displaying the changing 
+            if (h == 0) {
+                h = 12; //making it 12 hr format (because if it displays 0 then it is 24 hr format)
+            }
+            if (h > 12) { // if value greater then 12 (ex 13, 14, 15)
+                h = h - 12; // make it 13 - 12 = 1, 14 - 12 = 2
+                session = 'PM'; // make session to pm if time > 12
+            }
+
+
+
+
+            // DISPLAYING TIMINGS TO DOUBLE DIGIT IF SINGLE
+            if (h < 10) { // 0 - 9
+                h = "0" + h;
+            }
+            if (m < 10) { // 0 - 9
+                m = "0" + m;
+            }
+            if (s < 10) { // 0 - 9
+                s = "0" + s;
+            }
+
+
+
+
+            // changing value of div by id and printing timings
+            document.getElementById('digitalclock').innerHTML = h + ':' + m + ":" + s + " " + session;
+
+            // function inside setimeout gets called again and again after given interval 
+            // so we have put showtime() inside timeout to call it every second 
+            setTimeout(showtime, 1000); // call after 1 sec
+        }
+
+        // calling function showtime() 
+        showtime();
+
+    </script>
+
+</body>
+
+</html>

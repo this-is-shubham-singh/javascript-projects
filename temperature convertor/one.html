@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>temperature convertor</title>
+    <style>
+        /* entire body styling  */
+        body {
+            padding: 50px 100px;
+        }
+
+        /* heading styling  */
+        h1 {
+            text-align: center;
+        }
+
+        /* styling biggest div using id  */
+        #container {
+            text-align: center;
+            background-color: #1abc9c;
+            padding: 50px;
+        }
+
+        /* styling both DIV using class */
+        .input-div {
+            display: inline-block;
+        }
+
+        /* styling both INPUT using class  */
+        .inp {
+            padding: 5px 10px;
+            margin: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            width: 250px;
+            text-align: center;
+        }
+
+        /* styling LABEL tag  */
+        label {
+            font-size: 22px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Temperature convertor</h1>
+
+    <div id="container">
+
+        <div class="input-div">
+            <label>Celsius</label><br>
+            <input type="number" value="0" id="cel" class="inp"> <!-- default value 0 -->
+        </div>
+
+        <div class="input-div">
+            <label>Fahrenheit</label><br>
+            <input type="number" value="32" id="fah" class="inp">
+            <!--default value 32-->
+        </div>
+
+    </div>
+    <script>
+        // selecting first input tag (celcius) using id cel 
+        var cel = document.getElementById('cel');
+
+        // selecting second input tag (farenhite) using id fah 
+        var fah = document.getElementById("fah");
+
+        // using input eventlistner for first input tag (cel)
+        cel.addEventListener('input', function () {
+
+            // fetching celcius value and storing in c
+            let c = this.value;
+
+            // converting celcius value c to farenhite f
+            let f = (c * 9 / 5) + 32;
+
+            // if isinteger() returns false then make it true and execute if statement  
+            if(!Number.isInteger(f)){
+                
+                // how many decimal values you need  
+                f = f.toFixed(3);
+            }
+
+            // assign farenhite (f) value to second input tag
+            fah.value = f;
+
+        });
+
+
+        // using input eventlistener for second input tag (fah)
+        fah.addEventListener('input', function () {
+
+            // fetching farenhite value and storing in f 
+            let f = this.value;
+
+            // converting farenhite value f to celcius c 
+            let c = (f - 32) * 5 / 9;
+
+            // if isinteger() returns false then make it true and execute if statement  
+            if(!Number.isInteger(c)){
+
+                // how many decimal values you need 
+                c = c.toFixed(3);
+            }
+
+            // assigning celcius (c) value to first input tag
+            cel.value = c;
+
+        });
+
+    </script>
+
+</body>
+
+</html>

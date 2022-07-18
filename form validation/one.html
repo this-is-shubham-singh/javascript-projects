@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <style>
+        body {
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* styling div of entire form by id  */
+        #form-container {
+            background-color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 0px 0px 10px 0px;
+        }
+
+        input {
+            width: 200px;
+            padding: 10px;
+        }
+
+        input[type="submit"] {
+            width: 222px;
+            background-color: #3498db;
+            border: 0px;
+            color: white;
+        }
+
+        .error {
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- div of entire form  -->
+    <div id="form-container">
+
+        <!-- heading of form  -->
+        <h2>login</h2>
+
+        <form onsubmit="return validateform()">
+            <!-- input tags for text, password, submit -->
+            <input type="text" placeholder="user name" id="username"><br>
+
+            <!-- p tag to display error  -->
+            <p id="usererror" class="error"></p>
+
+            <input type="password" placeholder="password" id="password"><br>
+
+            <!-- p tag to display error message  -->
+            <p id="passerror" class="error"></p>
+            <input type="submit">
+        </form>
+    </div>
+
+    <script>
+        let username = document.getElementById('username');
+        let password = document.getElementById('password');
+
+        // flag is set true in defination 
+        let flag = 1;
+
+        function validateform() {
+            if (username.value == "") {
+
+                // defining error message if input is empty
+                document.getElementById('usererror').innerHTML = "user name is empty";
+
+                // whenever you get an error make flag 0
+                flag = 0;
+            }
+            else if (username.value.length < 3) {
+                // if username is less than 3 char then print this message 
+                document.getElementById('usererror').innerHTML = "username require min 3 char";
+
+                // as an error is rosen make flag 0
+                flag = 0;
+            }
+            else {
+                // when no error then remove error message 
+                document.getElementById('usererror').innerHTML = "";
+
+                // everything is right so make flag 1 
+                flag = 1;
+            }
+
+            if (password.value == "") {
+                // if password is left empty execute this message
+                document.getElementById('passerror').innerHTML = "password is empty";
+                
+                // condition is false here so flag is 0
+                flag = 0;
+            }
+            else {
+                // make p tag empty if everything is right
+                document.getElementById('passerror').innerHTML = "";
+
+                // condition true so flag = 1
+                flag = 1;
+            }
+
+            // if flag is 1 execute if 
+            if (flag) {
+                // return true to submit form 
+                return true;
+            }
+            else {
+                // return false to not submit form 
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

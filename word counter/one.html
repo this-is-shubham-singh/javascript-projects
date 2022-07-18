@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word counter</title>
+    <style>
+        /* styling entire body  */
+        body {
+            padding: 50px 100px;
+        }
+
+        /* styling h1 tag  */
+        h1 {
+            text-align: center;
+            background-color: #0067B0;
+            color: white;
+            padding: 10px;
+            margin: 0px;
+        }
+
+        /* styling textarea tag  */
+        #textbox {
+            width: 99.3%;
+            border-color: #0067B0;
+            font-size: 20px;
+        }
+
+        /* styling p tag  */
+        p {
+            text-align: center;
+            background-color: #0067B0;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            padding: 10px;
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Word and character counter</h1>
+
+    <!-- textarea to write text  -->
+    <textarea id="textbox" cols="30" rows="10"></textarea>
+    <p>
+        <!-- putting 0 in span to update number accordingly  -->
+        <span id="wordid">0</span> words and
+        <span id="charid">0</span> characters
+    </p>
+
+    <script>
+        // selecting textarea using textbox id 
+        let textbox = document.getElementById('textbox');
+
+        // using input addeventlistener for textarea tag
+        textbox.addEventListener('input', function () {
+
+            // COUNTING CHARACTERS--------- 
+
+            // assigning input content to text 
+            var text = this.value;
+
+            // finding out length of character typed 
+            let charlength = text.length;
+
+            // selecting character span using charid and assigning length value to span (innerHTML)
+            document.getElementById("charid").innerHTML = charlength;
+
+
+
+            // COUTING WORDS --------
+
+            // split by spaces and assigning in words as an array 
+            let words = text.split(" ");
+
+            // filtering empty spaces from array and storing only real values in cleanlist  
+            let cleanlist = words.filter(function (elm) {
+
+                // only return values which is not equal to space 
+                return elm != "";
+            });
+
+            // assigning words (cleanlist) length to span (innerHTML) words 
+            document.getElementById('wordid').innerHTML = cleanlist.length;
+
+
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

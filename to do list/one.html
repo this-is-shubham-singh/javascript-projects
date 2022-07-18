@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO-LIST</title>
+    <style>
+        li{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- heading  -->          
+        <h1 class="row">TO-DO LIST</h1>
+        <br><br>
+
+        <!-- for input text and button  -->
+        <div class="row">
+            <form>
+                <!-- input bar  -->
+                <div class="input-group">
+                    <input type="text" placeholder="to-do-item" id="box" style="width: 30vw">
+                </div>
+                <br>
+                <!-- button  -->
+                <div class="form-group">
+                    <input type="button" value="Add" style="width:10vw" onclick="add_item()">
+                </div>
+            </form>
+        </div>
+
+        <!-- representing items of to-do-list  -->
+        <div class="row">
+            <ul id="list_item"></ul>
+        </div>
+
+    </div>
+
+    <script>
+        // explaning onclick funtion 'add_item()' in button
+        function add_item() {
+
+            // selecting input text by id 
+            let item = document.getElementById('box');
+            // selecting ul by id = list_item 
+            let list_item = document.getElementById('list_item');
+
+
+            if (item.value != "") {
+                // making new element li 
+                let make_li = document.createElement('li');
+
+                // adding value of item to li 
+                make_li.appendChild(document.createTextNode(item.value));
+
+                // adding li to ul 
+                list_item.appendChild(make_li);
+
+                // making the input box empty after adding item to list 
+                item.value = "";
+
+                make_li.onclick = function () {
+                    
+                    // iske parentnode se permission lo aur ye wala li delete kar do 
+                    this.parentNode.removeChild(this);
+
+                    // this.appendchild.value = 
+                }
+                
+            }
+            else {
+                alert("add value to item");
+            }
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

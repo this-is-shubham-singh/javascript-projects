@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grade calculating system</title>
+    <link rel="stylesheet" href="one.css">
+</head>
+<body>
+    <div class="container">
+        <form id="form" >
+            <div class="book1">
+                <label >computer</label>
+                <input type="number" id="bookone" placeholder="marks">
+            </div>
+            <div class="book2">
+                <label >english</label>
+                <input type="number" id="booktwo" placeholder="marks">
+            </div>
+            <div class="book3">
+                <label >maths</label>
+                <input type="number" id="bookthree" placeholder="marks">
+            </div>
+            <div class="book4">
+                <label >physics</label>
+                <input type="number" id="bookfour" placeholder="marks">
+            </div>
+            <div class="book5">
+                <label >chemistry</label>
+                <input type="number" id="bookfive" placeholder="marks">
+            </div>
+            <div>
+                <button id="button" onclick="return calculate()">calculate</button>
+            </div>
+        </form>
+        <div id="table">
+            <table border="1">
+                <tr>
+                    <td>total marks:</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>obtained marks:</td>
+                    <td id="obtain"></td>
+                </tr>
+                <tr>
+                    <td>percentage:</td>
+                    <td id="percentage"></td>
+                </tr>
+                <tr>
+                    <td>grade:</td>
+                    <td id="grade"></td>
+                </tr>
+                <tr>
+                    <td>remarks:</td>
+                    <td id="remarks"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="grade.js"></script>
+</html>

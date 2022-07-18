@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sticky menu</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        /* styling logo div by id */
+        #header {
+            text-align: center;
+        }
+
+        /* styling logo image by id  */
+        #logo {
+            width: 250px;
+            height: auto;
+        }
+
+        /* styling nav tag using id  */
+        #menu-bar {
+            text-align: center;
+            background-color: cadetblue;
+        }
+
+        /* styling li inside nav tag  */
+        #menu-bar li {
+            display: inline-block;
+            padding: 15px 10px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* selecting div of h1, img and p  */
+        #container {
+            text-align: center;
+            padding: 50px 100px;
+        }
+
+        /* styling image inside div (container) */
+        #about-img {
+            width: 100%;
+        }
+
+        /* styling nav tag with class */
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <img src="https://scalebranding.com/wp-content/uploads/2021/01/Woman-In-Nature.jpg" id="logo">
+    </div>
+
+    <nav id="menu-bar">
+        <li>home</li>
+        <li>about us</li>
+        <li>our team</li>
+        <li>client</li>
+        <li>contact us</li>
+    </nav>
+
+    <div id="container">
+
+        <h1>about us</h1>
+        <img id="about-img"
+            src="https://www.susangreenecopywriter.com/wp-content/uploads/2013/01/iStock_000039291924_Medium.jpg">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui beatae aperiam aspernatur tempora, aut
+            asperiores commodi sint minus molestiae neque! Sequi quidem totam iusto voluptate dolor quia esse
+            repudiandae aliquid praesentium minus laborum molestias officiis voluptates perferendis perspiciatis rerum,
+            consectetur quo unde. Cumque, dolore ullam, itaque quod placeat sunt tempora iste alias iure facilis omnis?
+            Repudiandae vel, delectus perferendis, enim ipsa quidem sed voluptatem, veritatis in doloremque similique
+            dignissimos cum culpa. Impedit magnam error, eaque ipsam blanditiis, voluptas quod in tenetur suscipit
+            mollitia culpa repellendus, assumenda vero sint? Incidunt maiores quod error assumenda suscipit doloribus,
+            totam ullam sequi tenetur, rerum sed iste aliquam voluptatum quam? Beatae magni vitae omnis dignissimos
+            facere commodi modi voluptates architecto dicta, explicabo, ipsam numquam minus ratione aliquam odio. Magni
+            ratione molestiae animi fuga nostrum sunt quo! Dolor non praesentium aliquam et laborum distinctio sapiente
+            rerum magni iusto dolores hic nostrum reiciendis neque beatae, eum, iure culpa omnis. Culpa omnis veniam,
+            expedita totam id amet, nostrum, praesentium eius consequatur atque maiores iure odit illo inventore et
+            ipsum reprehenderit molestias. Dolores consectetur ipsa voluptate aperiam eveniet illo commodi blanditiis
+            dicta! Veniam animi unde amet officia distinctio quidem, autem dolores ipsam illum recusandae aperiam quia
+            minus sit rerum exercitationem incidunt reprehenderit, dolorem ex placeat, non eveniet inventore harum.
+            Animi eos magni quisquam exercitationem repellendus illo cum at, facere in consectetur maxime quibusdam unde
+            ratione dolor quas corrupti aspernatur iure neque voluptas dolores quaerat atque. Quo, repellendus alias
+            commodi similique asperiores inventore necessitatibus vero excepturi. Sunt excepturi impedit reprehenderit,
+            eveniet dolores blanditiis nemo laboriosam, quas incidunt ad quos magni minima exercitationem? Tempora
+            magnam hic, accusamus totam tenetur rem quibusdam amet laborum, aspernatur optio illum sequi? Nisi placeat
+            est aut repellendus consectetur vitae veniam dolore, necessitatibus, soluta sapiente repellat porro quaerat
+            possimus pariatur rerum eveniet distinctio unde amet assumenda esse quis. Maiores neque dicta, dolores alias
+            sequi corrupti magnam voluptatem ipsum, porro enim inventore obcaecati numquam ipsam debitis natus illo ab
+            nisi odit sapiente ad. Deleniti magnam veritatis corrupti quisquam quas dignissimos consequuntur blanditiis
+            optio vitae reiciendis quos molestiae at ad sapiente soluta quam, temporibus nobis repudiandae non quidem id
+            natus? Consequatur mollitia consequuntur ratione deleniti perspiciatis aliquam? Saepe perspiciatis nostrum
+            facere possimus enim perferendis, velit quam odit doloremque laudantium natus cumque assumenda, consequuntur
+            aspernatur corrupti, suscipit aliquam quae numquam molestias? Nisi quisquam voluptate quas. Maxime esse aut
+            beatae officiis voluptatibus architecto harum aperiam inventore quo sapiente nihil numquam odit, libero,
+            eaque ad, quidem cumque veniam! Modi temporibus necessitatibus ipsam porro dolorem tempore. Facilis hic fuga
+            necessitatibus vero vel obcaecati aut illum, suscipit quae quidem sit ut accusamus. Tempora culpa, quo
+            magnam qui quasi nemo architecto deserunt perferendis, facilis maiores blanditiis ratione tenetur atque!
+            Saepe laborum quaerat eius sit vero optio dolores sed maiores inventore quam! Voluptatibus excepturi magni
+            sit laborum esse fugiat ipsam doloremque eum aspernatur commodi iusto velit delectus qui quos quis aperiam
+            ea ad porro, odit, possimus expedita blanditiis, et placeat tenetur. Corporis enim magnam, totam excepturi
+            esse perspiciatis mollitia. Debitis maiores dolore molestiae neque a repellendus.
+        </p>
+
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+
+            // selecting nav tag using id 
+            let navbar = document.getElementById('menu-bar');
+
+            // if scrolling is greater than 190 than execute if 
+            if (window.pageYOffset >= 190) {
+
+                // add class sticky to nav tag, when scrolling is greater than 190
+                navbar.classList.add('sticky');
+            }
+            // if scrolling is less than 190 remove class = sticky
+            else{
+                navbar.classList.remove('sticky');
+            }
+        })
+    </script>
+</body>
+
+</html>

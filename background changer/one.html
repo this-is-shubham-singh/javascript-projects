@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background changer</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 20px 100px;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        /* styling all span (buttons) through class */
+        .btn {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            /*because span doesn't take height and widht*/
+            border: 2px solid grey;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* styling span (buttons) individually through id  */
+        #white {
+            background-color: white;
+        }
+
+        #aqua {
+            background-color: aquamarine;
+        }
+
+        #violet {
+            background-color: #ce9aff;
+        }
+
+        #black {
+            background-color: black;
+        }
+
+        /* styling div of spans with id   */
+        #color-switcher {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- color switcher buttons  -->
+    <div id="color-switcher">
+
+        <!-- defining 4 span for button with same class and different id  -->
+        <!-- using inline javasript (onclick property = execute changeBG function when clicked on ) -->
+        <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+        <span class="btn" id="aqua" onclick="changeBG('#7fffd4') "></span>
+        <span class="btn" id="violet" onclick="changeBG('#ce9aff')"></span>
+        <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+
+    </div>
+    <h1 class="text">About Us</h1>
+    <img src="https://www.susangreenecopywriter.com/wp-content/uploads/2013/01/iStock_000039291924_Medium.jpg" alt="">
+
+    <!-- p tag with 500 words  -->
+    <p class="text">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita perspiciatis repellat voluptate molestiae
+        modi sunt non asperiores sequi quis ipsum odio saepe excepturi ex sint impedit numquam ut nulla et eos est
+        magni, rem hic. Deserunt harum accusantium at nihil eum ipsa sint doloribus excepturi tempore fuga optio
+        voluptatibus rem perferendis, unde iure quo. Vel aliquid assumenda laudantium obcaecati a. Odio earum
+        distinctio, autem, voluptatibus placeat nostrum delectus sunt aliquid ratione impedit veritatis pariatur natus
+        id laudantium nesciunt dicta quam aliquam, est beatae officiis laborum? Reprehenderit suscipit qui est,
+        reiciendis excepturi numquam veniam in ipsa repellendus optio ducimus! Quas aliquid alias quaerat dolor
+        accusamus iure pariatur dolores assumenda aliquam consequatur, voluptate excepturi odio vel ipsa, atque officia
+        rerum, asperiores placeat dignissimos blanditiis voluptas natus ex nobis dolorem! Atque voluptatibus distinctio
+        nulla ex repellat vero eaque, obcaecati dolorem. Reprehenderit esse quos laboriosam, neque nulla, quia odit
+        deserunt doloribus similique cumque aut fuga soluta! Distinctio, vitae velit ipsam nemo, dicta eaque quae
+        reiciendis facilis quas culpa alias dolore consectetur itaque modi ratione placeat? Tempore, eius, esse
+        voluptatem aut inventore amet earum perferendis doloribus veritatis suscipit possimus fugit. Ut quas at facere
+        nostrum? Provident facilis nemo omnis qui corrupti aliquam et dignissimos itaque suscipit nulla? Cumque
+        necessitatibus dicta molestias rerum laborum quos illum ipsa quo optio voluptas, nostrum, excepturi dolorem.
+        Temporibus aliquam molestiae, aut dignissimos repellendus modi a eaque voluptas earum, aspernatur itaque nisi
+        nostrum rerum delectus cum culpa laudantium at sequi libero omnis impedit necessitatibus blanditiis, perferendis
+        debitis. Autem tempore qui error mollitia recusandae ducimus est, itaque enim exercitationem sequi amet at,
+        accusamus ipsam voluptate illo voluptatem quisquam neque atque illum numquam sapiente possimus. Fuga maiores,
+        quis aliquid fugit sed expedita nemo necessitatibus minima nihil pariatur praesentium quibusdam! Aut distinctio
+        facere, minus eligendi excepturi sint quo nesciunt blanditiis hic cum laborum dolorum culpa voluptates
+        voluptatibus alias officiis ipsum suscipit. Odit, voluptatum nulla neque harum dolores dolor error quam delectus
+        adipisci id tenetur temporibus, quis molestias perferendis ratione doloribus. Maxime aperiam dicta aut
+        temporibus non cumque optio voluptatem eaque quia. Doloremque corrupti unde rem explicabo modi quisquam, odio
+        veritatis dolor adipisci iure animi omnis, sequi inventore? Ab, sit delectus? Dignissimos laudantium vitae
+        aspernatur assumenda eligendi obcaecati aliquid nisi inventore exercitationem facilis. Laudantium repudiandae
+        sapiente, optio illo et aperiam possimus accusantium, quam itaque atque distinctio perferendis sint
+        consequuntur, dolorum dicta fugit? Labore nulla nesciunt laboriosam perspiciatis quas reiciendis necessitatibus
+        accusamus saepe? Error, minima repellat debitis inventore dolorem ex veritatis aspernatur quasi reprehenderit
+        placeat, aliquid consequuntur dolor voluptates eos corporis laboriosam perspiciatis? Velit magni odio autem,
+        culpa odit explicabo sint perspiciatis aspernatur asperiores dolor nobis molestiae in temporibus, provident hic
+        aliquid ut quaerat laborum ipsam vitae! Consequuntur reiciendis adipisci alias consectetur veniam sequi commodi
+        eveniet tempore earum exercitationem porro esse nostrum, sunt laboriosam error dolore asperiores nihil velit
+        atque architecto rerum quos culpa. Suscipit, minima! Quo repellendus laboriosam earum harum consequatur
+        exercitationem eos vel, sit, voluptates veniam dicta, nesciunt maiores? Fugiat eveniet earum cumque itaque sit,
+        at, natus repellendus ipsa aliquid corrupti ad est ex.
+    </p>
+
+    <script>
+        function changeBG(color) {
+
+            // assign choosen color to background 
+            document.body.style.backgroundColor = color;
+
+            // selecting h1 and p tag by id and assigning value to txt , now txt in any array of charcters
+            let txt = document.getElementsByClassName('text');
+
+            // if color of background is black 
+            if (color == "#000000") {
+
+                // using for loop because txt is an array 
+                for (let elm of txt) {
+
+                    // changing letter colors to white 
+                    elm.style.color = 'white';
+                }
+            }
+            // if color of background is not black 
+            else {
+                for (let elm of txt) {
+
+                    // keep color black for other colors
+                    elm.style.color = 'black';
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
